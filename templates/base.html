@@ -1,0 +1,81 @@
+{% load static %}
+
+{% include 'explore/navbar.html' %}
+
+
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+        <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;700&display=swap" rel="stylesheet">
+        <title>SharexCare - Explore</title>
+    </head>
+
+
+    <body >
+        <br><br><br>
+        {%block content%}
+       
+        {% for post in Posts %}
+        <div id="feed" class="feeds">
+            <div class="container mt-5" style="border: 1px;">
+                <div class="row">
+                    <div class="col-lg-8 col-md-6 col-sm-12 order-lg-last order-md-last order-sm-last">
+                        <div class="container">
+                            <div class="row">
+                                <div class="card m-auto" style="width:100%">
+                                    <div class="card-body my-2">
+                                        <h2 class="card-title">
+                                            {{ post.title}}
+                                        </h2>
+                                        <p class="card-text"><a href="{% url 'profile_view' post.author.username %}" id="myBtn" style="text-decoration: none; cursor:pointer;">@{{post.author.username}}</a>,&nbsp; • &nbsp; {{post.created_on}}</span><span class="date_published">{{user.email}}</span></p><hr width="100%">
+                                        <a href="{% url 'feed_read' post.title %}" class="tweet_body"> 
+                                            <div class="card-body">
+                                            <p class="card-text">{{post.body}} </p>
+                                            </div>
+                                        </a>
+                                        <!--<span><a href="#" class="btn btn-outline-primary">Read More →</a></span>-->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+        {% endblock %}
+        <br><br>
+
+        <nav aria-label="Page navigation example">
+          <ul class="pagination justify-content-center">
+            <li class="page-item ">
+              {% if Posts.has_previous %}
+                <a class="page-link" href="?page={{ Posts.previous_page_number }}" tabindex="-1">Previous</a>
+              {% endif %}
+            </li>
+            {% for i in Posts.paginator.page_range %}
+              {% if Posts.number == i %}
+                <li class="page-item"><span class="page-link">{{ i }} <span class="sr-only">(current)</span></span></li>
+              {% else %}
+                <li class="page-item"><a class="page-link" href="?page={{ i }}">{{ i }}</a></li>
+              {% endif %}
+            {% endfor %}
+
+            {% if Posts.has_next %}
+              <li class="page-item">
+                <a class="page-link" href="?page={{ Posts.next_page_number }}">Next</a>
+              </li>
+            {% endif %}
+          </ul>
+        </nav>
+        
+        
+
+        
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>  
+    </body>
+</html>

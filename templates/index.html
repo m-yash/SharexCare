@@ -1,0 +1,39 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+        <title>SharexCare - Home</title>
+    </head>
+    <body>
+        <div class="wrapper">
+            <div class="left-col">
+                <img src="{% static 'img/main-logo.png' %}" alt="Logo" class="logo">
+    
+                <div class="content">
+                    <h1>Care on the internet</h1>
+                    <p>Let your ideas reach to the world without fear using our platform.</p>
+                    <a href="{% url 'signin' %}"><button type="button" class="signin">Sign in</button></a>
+                    <a href="{% url 'saved' %}"><button type="button" class="register">Register Now</button></a>
+                </div>
+            </div>
+            <div class="right-col">
+                <div class="slider">
+                    <img src="{% static 'img/pic-1.jpg' %}" alt="" id="slider">
+                </div>
+                <div class="slider-content">
+                    <h2>Where can I find ideas for projects?</h2>
+                    <hr>
+                    <p>Here !</p>
+
+                    <!-- <div class="controller">
+                        <img src="{% static 'images/back.png' %}" alt="" id="BackBtn">
+                        <div class="vertical-line"></div>
+                        <img src="{% static 'images/next.png' %}" alt="" id="NextBtn">
+                    </div> -->
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,47 @@
+{% load static %}
+
+{% include 'explore/navbar.html' %}
+
+
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+        <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;700&display=swap" rel="stylesheet">
+
+        <title>SharexCare - {{title_}}</title>
+    </head>
+
+
+    <body >
+        <br><br><br>
+        <div id="feed" class="feeds">
+            <div class="container mt-5" style="border: 1px;">
+                <div class="row">
+                    <div class="col-lg-8 col-md-6 col-sm-12 order-lg-last order-md-last order-sm-last">
+                        <div class="container">
+                            <div class="row">
+                                <div class="card m-auto" style="width:100%">
+                                    <div class="card-body my-2">
+                                        <h2 class="card-title">
+                                            {{ title_ }}
+                                        </h2>
+                                        <p class="card-text"> &nbsp; • &nbsp; {{ created_on_}}</span><span class="date_published">{{user.email}}</span></p><hr width="100%">
+                                        <a href="#" class="tweet_body"> 
+                                            <div class="card-body">
+                                            <p class="card-text">{{body_}} </p>
+                                            </div>
+                                        </a>
+                                        <br><br><br><br><br><br><br><br><br><br><br><br>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

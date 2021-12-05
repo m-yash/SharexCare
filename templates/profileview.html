@@ -1,0 +1,116 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"/>
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet"/>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<style>
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  max-width: 300px;
+  margin: auto;
+  text-align: center;
+  font-family: arial;
+}
+
+.title {
+  color: grey;
+  font-size: 18px;
+}
+
+button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: 18px;
+}
+
+a {
+  text-decoration: none;
+  font-size: 22px;
+  color: black;
+}
+
+button:hover, a:hover {
+  opacity: 0.7;
+
+
+
+
+
+}
+</style>
+</head>
+<body>
+
+<h2 style="text-align:center">
+  <input type="button" id="myBtn" value="User Profile Card">
+</h2>
+
+
+<div class="w3-container w3-center w3-animate-top" id="profilebody" style="display: none;">
+  <div class="card card-outline-danger text-center">
+
+    <span class="pull-right clickable close-icon" id="close" data-effect="fadeOut"><i class="fa fa-times"></i></span>
+    <div class="card-block">
+      <div class="card">
+        
+        <h1>John Doe</h1>
+        <p class="title">{{profile.username}}</p>
+        <p>Harvard University</p>
+        <div style="margin: 24px 0;">
+          <a href="#"><i class="fa fa-github"></i></a> &nbsp
+          <a href="#"><i class="fa fa-twitter"></i></a> &nbsp
+          <a href="#"><i class="fa fa-linkedin"></i></a> &nbsp 
+          <a href="#"><i class="fa fa-youtube"></i></a> 
+        </div>
+        <p><button>Contact</button></p>
+      </div> 
+    </div>
+  </div>
+</div>
+<script type="text/javascript">
+  //$('.close-icon').on('click',function() {
+  //$(this).closest('.card').fadeOut();
+  //});
+
+//function toggler(divId) {
+//    $("#" + divId).toggle();
+//}
+var modal = document.getElementById("profilebody");
+
+var btn = document.getElementById("myBtn");
+
+var span = document.getElementById("close");
+
+btn.onclick = function() {
+  modal.style.display = "block";
+}
+
+
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+</script>
+</body>
+</html>

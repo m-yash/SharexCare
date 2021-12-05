@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+
+
+<html>
+<head>
+	<style type="text/css">
+	.box
+	{
+		position: fixed;
+		top: 100px;
+		transform: rotate(80deg);
+		left: 700px;
+	}
+	.wave 
+	{
+		position: absolute;
+		opacity: .4;
+		width: 1500px;
+		height: 1300px;
+		margin-left: 0px;
+		margin-top: 0px;
+		border-radius: 43%;
+	}
+	@keyframes rotate 
+	{
+		from { transform: rotate(0deg); }
+		from { transform: rotate(360deg); }
+	}
+	.wave.-one 
+	{
+		animation: rotate 10000ms infinite linear;
+		opacity: .1;
+		background: #fc1fde;
+	}
+
+	.wave.-two 
+	{
+		animation: rotate 7000ms infinite linear;
+		opacity: .1;
+		background: rgb(207, 197, 197);
+	}
+
+	.wave.-three 
+	{
+		animation: rotate 7500ms infinite linear;
+		background-color: #f1b5e9;
+	}
+
+
+	</style>
+	
+</head>
+<body >
+	<div class='box' style="z-index: -1;">
+        <div class='wave -one'></div>
+        <div class='wave -two'></div>
+        <div class='wave -three'></div>
+    </div>
+</body>
+</html>
