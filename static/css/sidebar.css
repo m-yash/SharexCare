@@ -1,0 +1,32 @@
+/**Sidebar**/
+
+.sidebar {
+    
+    
+    height: 100%;
+    background-color: white;
+    width: 430px;
+    position: fixed;
+    margin-left: 1100px;  
+}
+
+.sidebar a {
+    text-decoration: none;
+    color: black;
+}
+
+#tweet {
+    border-radius: 50px !important;
+    position: absolute;
+    padding: 8px;
+    width: 120px;
+    
+    margin: 130px;
+    
+}
+
+#copyright {
+    position: absolute;
+    margin: 130px;
+    top: 250px
+}

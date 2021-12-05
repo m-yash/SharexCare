@@ -1,0 +1,414 @@
+.container{
+ margin:0 auto;
+ /* width:600px; */
+}
+
+:root {
+    --primary-color: #0275d8;
+    --primary-light: #cce3f7;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+body {
+    background: #f9f9f9;
+}
+
+/* Navbar */
+.bg-light {
+    background: #fff !important;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+#brand {
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    margin-left: 0.5em;
+}
+
+#username {
+    text-transform: capitalize;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.wrapper {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    flex-wrap: wrap;
+}
+
+.left-col, .right-col {
+    flex-basis: 50%;
+    height: 100vh;
+    position: relative;
+}
+
+.logo {
+    display: block;
+    width: 80px;
+    margin-top: 30px;
+    margin-left: 120px;
+}
+
+.content {
+    max-width: 500px;
+    position: absolute;
+    top: 50%;
+    left: 120px;
+    transform: translateY(-50%);
+}
+
+.content h1 {
+    color: #d60bbc;
+    font-size: 60px;
+    line-height: 70px;
+    margin: 25px 0;
+    font-weight: 700;
+}
+
+.content p {
+    color: #777;
+    font-size: 17px;
+    line-height: 28px;
+}
+
+.signin {
+    width: 175px;
+    border: none;
+    background: #d60bbc;
+    padding: 25px 0;
+    color: #fff;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.register {
+    width: 175px;
+    border: 1px solid #d60bbc;
+    background: #fff;
+    
+    padding: 25px 0;
+    color: #d60bbc;
+    font-size: 24px;
+    cursor: pointer;
+    margin-left: 20px;
+    transition: 0.2s linear;
+}
+
+.register:hover {
+    background: #d60bbc;
+    color: #fff;
+}
+
+.slider {
+    width: 100%;
+    height: 60%;
+    display: flex;
+}
+
+.slider img {
+    width: 100%;
+}
+
+.slider-content {
+    width: 100%;
+    height: 40%;
+    background-color: #d60bbc;
+    padding-top: 30px;
+    padding-left: 30px;
+    box-sizing: border-box;
+}
+
+.slider-content h2 {
+    font-size: 26px;
+    font-weight: 100;
+    color: #fff;
+}
+
+.slider-content p {
+    color: var(--primary-light);
+    font-size: 16px;
+    line-height: 24px;
+    margin-bottom: 20px;
+}
+
+hr {
+    border: none;
+    width: 270px;
+    height: 1px;
+    background: #ffffff;
+    margin: 20px 0 30px 0;
+}
+
+.controller {
+    width: 120px;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.controller img {
+    width: 45px;
+    cursor: pointer;
+}
+
+.vertical-line {
+    width: 2px;
+    height: 30px;
+    background: var(--primary-light);
+}
+
+/* media queries */
+@media only screen and (max-width: 800px) {
+    .logo {
+        margin: 30px auto;
+    }
+
+    .left-col, .right-col {
+        flex-basis: 100%;
+    }
+
+    .content {
+        left: 0;
+        padding: 20px;
+        text-align: center;
+    }
+
+    .content h1 {
+        font-size: 34px;
+        line-height: 38px;
+    }
+
+    .slider, .slider-content {
+        height: auto;
+    }
+}
+
+/* Cards */
+.card-header,
+.card-body,
+.card-footer {
+    background: #fff !important;
+}
+
+.author_name {
+    font-weight: 700;
+    color: #000;
+}
+
+.author_username,
+.date_published {
+    font-weight: 400;
+    color: #898989;
+}
+
+.tweet_body,
+.card-footer {
+    color: #000 !important;
+    font-weight: 400;
+    text-decoration: none;
+}
+
+.tweet_body:hover {
+    text-decoration: none;
+    color: #000;
+}
+
+.user_profile {
+    width: 20px !important;
+    height: 20px !important;
+    margin-top: -5px !important;
+    
+}
+
+.tweet_float {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background: var(--primary-color);
+    border-radius: 50%;
+}
+
+#tweet {
+    border-radius: 50px !important;
+}
+/**
+Fixing Left side on tweets feed page.
+**/
+
+/*signin*/
+.signin_h1 {
+
+    color: #d60bbc;
+    padding-left: 100px;
+    padding-top: 60px;
+
+}
+
+.signin_signup_link {
+    padding-left: 100px;
+    padding-top: 20px;
+
+}
+
+.signin_input {
+    padding-left: 100px;
+    padding-top: 50px;
+}
+
+.signin_user_pass {
+    height: 25px;
+    width: 40%;
+}
+
+.signin_button {
+    padding-left: 100px; 
+    padding-top: 30px;
+}
+#signin_btn {
+    width: 100px;
+    height: 50px;
+    background-color: #d60bbc;
+    border: none;
+    color: #ffffff;
+    font-size: 20px;
+}
+
+/**NavBar**/
+
+.navbar_class {
+    background-color:#ffffff;
+    height: 73px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1;
+}
+
+#navbar_logo {
+    height: 50px;
+    padding-left: 90px;
+    padding-top: 10px;
+}
+
+#navbar_brand_name {
+    padding: 5px;
+    padding-left: 10px;
+    position: absolute;
+    top: 15px;
+    color: black;
+    font-weight: bold;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 18px;
+}
+
+/**#navbar_home {
+    padding: 5px;
+    margin-left: 900px;
+    position: absolute;
+    top: 15px;
+    color: black;
+    font-weight: bold;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 18px;
+}**/
+
+#navbar_share {
+    border: solid 1;
+    border-radius: 50px;
+    padding: 7px;
+    margin-left: 1180px;
+    position: absolute;
+    top: 15px;
+    
+    padding-right: 28px;;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 18px;
+}
+
+#navbarDropdownMenuLink {
+    margin-left: 1420px;
+    position: absolute;
+    top: 15px;
+}
+
+
+/**Sidebar**/
+
+#tweet {
+    border-radius: 50px !important;
+    
+    padding: 8px;
+    top: 15;
+    
+    
+    
+}
+
+/**Signup**/
+
+.signup_h1 {
+    font-family: 'Source Sans Pro', sans-serif !important;
+    color: #d60bbc;
+    padding-left: 100px;
+    padding-top: 60px;
+
+}
+
+.signup_input {
+    padding-left: 100px;
+    padding-top: 50px;
+}
+
+.signup_inputbox {
+    height: 25px;
+    width: 40%;
+}
+
+.signin_button {
+    padding-left: 100px; 
+    padding-top: 30px;
+}
+#signin_btn {
+    width: 100px;
+    height: 50px;
+    background-color: #d60bbc;
+    border: none;
+    color: #ffffff;
+    font-size: 20px;
+}
+
+
+/**Profile**/
+#profile_box {
+    border-top: 1px solid;
+    border-bottom: 1px solid;
+    margin-right: 400px;
+    margin-left: 400px;
+    margin-top: 70px;
+    
+}
+
+#profile_name {
+    color: #d60bbc;
+    margin-top: 8px;
+    margin-left: 8px;
+    text-align: center;
+}
+
+#profile_username {
+    margin-top: 8px;
+    margin-left: 8px;
+}
+
+#profile_link {
+    text-decoration: none;
+}
